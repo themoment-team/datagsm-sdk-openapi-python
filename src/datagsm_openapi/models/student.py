@@ -24,10 +24,9 @@ class Student(BaseModel):
         number: Student number within class
         student_number: Full student ID number
         major: Major (SW_DEVELOPMENT, SMART_IOT, AI)
-        role: Student role (GENERAL_STUDENT, STUDENT_COUNCIL, etc.)
+        role: Student role (GENERAL_STUDENT, STUDENT_COUNCIL, WITHDRAWN, etc.)
         dormitory_floor: Dormitory floor number
         dormitory_room: Dormitory room number
-        is_leave_school: Whether the student has left school
         major_club: Major club membership
         job_club: Job club membership
         autonomous_club: Autonomous club membership
@@ -48,9 +47,6 @@ class Student(BaseModel):
     )
     dormitory_room: Optional[int] = Field(
         None, alias="dormitoryRoom", description="Dormitory room"
-    )
-    is_leave_school: bool = Field(
-        ..., alias="isLeaveSchool", description="Whether student has left school"
     )
     major_club: Optional[Club] = Field(None, alias="majorClub", description="Major club")
     job_club: Optional[Club] = Field(None, alias="jobClub", description="Job club")

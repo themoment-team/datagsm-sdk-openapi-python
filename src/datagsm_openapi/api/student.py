@@ -21,7 +21,6 @@ class StudentRequest:
         sex: Gender filter
         role: Student role filter
         dormitory_room: Dormitory room number
-        is_leave_school: Filter by leave school status
         is_graduate: Filter by graduate status
         page: Page number (default: 0)
         size: Page size (default: 300)
@@ -38,7 +37,6 @@ class StudentRequest:
     sex: Optional[Sex] = None
     role: Optional[StudentRole] = None
     dormitory_room: Optional[int] = None
-    is_leave_school: Optional[bool] = None
     is_graduate: Optional[bool] = None
     page: int = 0
     size: int = 300
@@ -61,7 +59,6 @@ class StudentRequest:
             "sex": self.sex.value if self.sex else None,
             "role": self.role.value if self.role else None,
             "dormitoryRoom": self.dormitory_room,
-            "isLeaveSchool": self.is_leave_school,
             "isGraduated": self.is_graduate,
             "page": self.page,
             "size": self.size,
