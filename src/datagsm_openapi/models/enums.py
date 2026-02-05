@@ -33,6 +33,7 @@ class StudentRole(str, Enum):
     STUDENT_COUNCIL = "STUDENT_COUNCIL"
     DORMITORY_MANAGER = "DORMITORY_MANAGER"
     GRADUATE = "GRADUATE"
+    WITHDRAWN = "WITHDRAWN"
 
 
 class MealType(str, Enum):
@@ -64,7 +65,6 @@ class StudentSortBy(str, Enum):
     ROLE = "ROLE"
     SEX = "SEX"
     DORMITORY_ROOM = "DORMITORY_ROOM"
-    IS_LEAVE_SCHOOL = "IS_LEAVE_SCHOOL"
 
 
 class ClubSortBy(str, Enum):
